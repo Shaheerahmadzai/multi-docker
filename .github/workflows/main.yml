@@ -1,0 +1,10 @@
+name: Release branch
+run-name: Release "${{ github.ref_name }}" branch
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+      - branch-to-ignore <-- Add branch name here
+jobs:
+  Supervisely-Release:
